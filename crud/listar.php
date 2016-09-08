@@ -18,7 +18,9 @@
 					<th>id</th>
 					<th>Apellidos y Nombres</th>
 					<th>Fecha Creacion</th>
-					<th></th>
+					<th>
+						Modificar
+					</th>
 				</tr>
 				<?php
 					$consulta=$conexion->query('SELECT p.*FROM personas p');
@@ -28,7 +30,11 @@
 						<td><?php echo$fila['persona_id'];?></td>
 						<td><?php echo$fila['paterno'].' '.$fila['materno'].' '.$fila['nombres'];?></td>
 						<td><?php echo$fila['fecha_registro'];?></td>
-						<td></td>
+						<td>
+							<a href="modificar.php?id=<?php echo $fila['persona_id'];?>">
+						<span class="glyphicon glyphicon-edit"></span>
+						</a>
+						</td>
 					</tr>
 				<?php			
 					}
