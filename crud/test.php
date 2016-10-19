@@ -13,18 +13,6 @@
 
 			<h1>Gestion de Personas</h1>
 
-			<?php var_dump($conexion);?>
-
-			<?php 
-				echo'<pre>';print_r($conexion);echo'</pre>';
-			?>
-
-			<?php 
-				$consulta=$conexion->query('SELECT p.*FROM personas P');
-				$fila=$consulta->fetch_assoc();
-				echo'<pre>';print_r($fila);echo'</pre>';
-			?>
-
 		</div>
 		<div class="col-md-4">
 			<div class="alert alert-success">
@@ -32,7 +20,16 @@
 			</div>
 		</div>
 	</div>
+	<?php var_dump($conexion);?>
+	<?php 
+		echo'<pre>';print_r($conexion);echo'</pre>';
+	?>
+	<?php 
+		$consulta=$conexion->query('SELECT p.* FROM personas p');
+		$fila=$consulta->fetch_assoc();
 
+			echo '<pre>';print_r($fila);echo '</pre>';
+	?>
 </div>
 
 <?php

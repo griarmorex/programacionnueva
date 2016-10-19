@@ -1,7 +1,7 @@
 <?php
 	include('inc/conexion.php');
 
-	$sql="INSERT INTO personas SET "."paterno='{$_POST['txt-paterno']}',"."materno='{$_POST['txt-materno']}',"."nombres='{$_POST['txt-nombres']}'";
+	$sql="DELETE FROM personas WHERE persona_id={$_GET['id']}";
 
 	$resultado=$conexion->query($sql);
 	if($resultado){
