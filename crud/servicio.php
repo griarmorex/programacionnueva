@@ -3,7 +3,6 @@
 	include('inc/menu.php');
 
 
-
 ?>
 
 <div class="container">
@@ -11,7 +10,7 @@
 	<div class="row">
 		<div class="col-md-8">
 
-			<h1>Servicio Persona</h1>
+			<h1>Servicios</h1>
 
 		</div>
 		<div class="col-md-4">

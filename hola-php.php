@@ -1,18 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 	<head>
-		<title>Hola PHP</title>
+		<title>hola php</title>
 		<style type="text/css">
-			/* Presentacion*/
-			h1{
-				color: peru;
-			}
-			p{
-				color: #adcbf7;
-			}
-			li:first-letter{
-				font-size: 2em;
-			}
+		/*presentacion*/
+		h1{color:peru;}
+		p{color:#adcbf7;}
+		li:first-letter{font-size: 2em;}
 		</style>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -25,11 +19,11 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			alert("Hola: "+prompt("Ingresa tu nombre"));
+		alert("Hola"+ prompt("ingresa tu nombre"));
 		</script>
-		<h1>Hola Php</h1>
+		<h1>hola php</h1>
 		<p>Dias de la semana</p>
-		<a class="btn btn-success" href="http://www.google.com">Ir a Google</a>
+		<a class="btn btn-primary" href="http://www.google.com">Ir a google</a>
 		<ol>
 			<li>Lunes</li>
 			<li>Martes</li>
@@ -39,5 +33,6 @@
 			<li>Sabado</li>
 			<li>Domingo</li>
 		</ol>
+
 	</body>
 </html>

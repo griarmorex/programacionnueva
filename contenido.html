@@ -1,4 +1,22 @@
-<h1>Contenido Asincrono<h1>
-<p>
-	Este contenido fue recuperado mediante programacion, el programador define el evento que genera su carga
-</p>
+<h1>Contenido Asincrono</h1>
+<p>Este contenido fue recuperado mediante programacion, el programador define el evento que genera su carga</p>
+<script type="text/javascript">
+		p={"paterno":"Flores",
+			"materno":"Condori",
+			"nombres":"Juan"};
+
+		function mostrar(persona){
+			tabla=$("<table>");
+			cabecera=$("<tr>").append(
+				$("<th>").text("Paterno"),
+				$("<th>").text("Materno"),
+				$("<th>").text("Nombres"));
+			
+			datos=$("<tr>").append(
+				$("<td>").text(persona.paterno),
+				$("<td>").text(persona.materno),
+				$("<td>").text(persona.nombres));
+
+			$("body").append($tabla.append(cabecera,datos));
+		}
+	</script>

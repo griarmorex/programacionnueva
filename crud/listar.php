@@ -3,33 +3,30 @@
 	include('inc/menu.php');
 	include('inc/conexion.php');
 
-
 ?>
 
 <div class="container">
 
 	<div class="row">
 		<div class="col-md-8">
-
 			<h1>Listado de Personas</h1>
-			<table class="table">
-					
+			<table class='table'>
 				<tr>
 					<th>id</th>
 					<th>Apellidos y Nombres</th>
-					<th>Fecha Creacion</th>
+					<th>Fecha de Creacion</th>
 					<th>Modificar</th>
 					<th>Eliminar</th>
-				<tr>
-				<?php 
+					<th></th>
+				</tr>
+				<?php
 					$consulta=$conexion->query('SELECT p.* FROM personas p');
-					while ($fila=$consulta->fetch_assoc()){
-					?>
+					while($fila=$consulta->fetch_assoc()){
+				 ?>
 						<tr>
-							<td><?php echo $fila['persona_id'];?></td>
-							<td><?php echo $fila['paterno'].' '.
-								$fila['materno'].' '.$fila['nombres'];?></td>
-							<td><?php echo $fila['fecha_registro'];?></td>
+							<td><?php echo $fila['persona_id'] ?></td>
+							<td><?php echo $fila['paterno'].' '.$fila['materno'].' '.$fila['nombres']; ?></td>
+							<td><?php echo $fila['fecha_registro']; ?></td>
 							<td>
 								<a href="modificar.php? id=<?php echo $fila['persona_id'];?>">
 									<span class="glyphicon glyphicon-edit"></span>
@@ -40,9 +37,11 @@
 									<span class="glyphicon glyphicon-trash"></span>
 								</a>
 							</td>
-					<?php
-						}
-					?>
+						</tr>
+
+					<?php	
+					}
+				 ?>
 			</table>
 		</div>
 		<div class="col-md-4">

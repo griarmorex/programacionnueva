@@ -1,2 +1,2 @@
 # programacionweb
-primer proyecto en el curso de programación web
+primer proyecto en el curso web

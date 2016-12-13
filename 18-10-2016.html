@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Bootstrap 101 Template</title>
+	<title>Bootstrap 101 Template</title>
 
-		<link href="crud/assets/css/bootstrap.min.css" rel="stylesheet">
-		<link href="crud/assets/css/app.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-			<![endif] f114016-->
+	<link href="./crud/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./crud/assets/css/app.css" rel="stylesheet">
 
-	</head>
-	<body>
-		<script src="crud/assets/js/jquery-3.1.1.js"></script>
-		<script src="crud/assets/js/bootstrap.min.js"></script>
-		<script src="crud/assets/js/herramientas.js"></script>
-		<script type="text/javascript">
-			$(
-				function(){//alert("Hola SCRIPT");
-				var mi_boton=$("<button>");
-				mi_boton.attr({"class":"btn btn-primary",
-								"id":"button-cargar"});
-				mi_boton.text("Cargar Contenido");
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body>
 
-				var cuerpo=$("body");
-
-				cuerpo.append(mi_boton);
-
-				mi_boton.on("click", function(e){
-					alert("Hola DOM");
-					$.ajax(
-						{
-							method:"post",
-							url:"contenido.html",dataType:"html"
-						}
-						).done(function(respuesta){
-							division.html(respuesta);
+	<script src="crud/assets/js/jquery-3.1.1.js"></script>
+	<script src="crud/assets/js/bootstrap.min.js"></script>
+	<script src="crud/assets/js/herramientas.js"></script>
+	<!--<script src="crud/assets/js/asincrono.js"></script>-->
+	<!--<script type="text/javascript">
+		//$(
+			//function(){ alert('Hola Script');}
+			var mi_boton=$("<button>");
+			mi_boton.attr({"class":"btn btn-primary","id":"button-cargar"});
+			mi_boton.text("Cargar Contenido");
+			var cuerpo=$("body");
+			cuerpo.append(mi_boton);
+			
+			mi_boton.on("click" ,function(e)
+			{
+				//alert("Hola DOM");
+				//e.preventDefault();
+				
+				$.ajax({
+						method:"post",
+						url:"contenido.html",dataType:"html"
+						}).done(function(respuesta){
+						//division.text(respuesta);
+						//division.html(respuesta);
+						division.append(respuesta);
+						//division.preppend(respuesta);
 						});
-					e.preventDefault();
-				});
-				var division=$("<div>");
-						division.attr({"id":"div-contenido"});
-						division.text("Aqui va el contenido");
-						cuerpo.append(division);
-			}
-				)
-		</script>
-	</body>
+			});
+			//);
+			var division=$("<div>");
+			division.attr({"id":"div-contenido"});
+			division.text("Aqui va el Contenido");
+			cuerpo.append(division);
+	</script>-->
+	<script type="text/javascript">
+		p={"paterno":"Flores",
+			"materno":"Condori",
+			"nombres":"Juan"};
+
+		function mostrar(persona){
+			tabla=$("<table>");
+			cabecera=$("<tr>").append(
+				$("<th>").text("Paterno"),
+				$("<th>").text("Materno"),
+				$("<th>").text("Nombres"));
+			
+			datos=$("<tr>").append(
+				$("<td>").text(persona.paterno),
+				$("<td>").text(persona.materno),
+				$("<td>").text(persona.nombres));
+
+			$("body").append(tabla.append(cabecera,datos));
+		}
+		mostrar(p);
+	</script>
+
+</body>
 </html>

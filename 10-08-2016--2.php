@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-	</head>
-	<body>
-		<?php echo "<select>";
-			for($i=1;$i<=5;$i++){
-				echo "<option><valve>".$i."</valve></option>";
-			}
-			echo "</select>";
-			echo "<h1>Encabezado 1</h1>";
-			echo "<h2>Encabezado 2</h2>";
-			echo "<h3>Encabezado 3</h3>";
-			echo "<h4>Encabezado 4</h4>";
-			echo "<h5>Encabezado 5</h5>";
-			echo "<h6>Encabezado 6</h6>";
-		?>
-		<?php
-			
-		?>
-	</body>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<?php
+		echo "<ul>";
+		for ($i=1; $i <=5 ; $i++) 
+		{ 
+			echo "<li><h3>".$i."</li></h3>";
+		}
+		echo "</ul>";
+		/*echo "<h1>emcabezado 1</h1>";
+		echo "<h2>encabezado 2</h2>";
+		echo "<h3>encabezado 3</h3>";
+		echo "<h4>encabezado 4</h4>";
+		echo "<h5>encabezado 5</h5>";
+		echo "<h6>encabezado 6</h6>";*/
+
+	?>
+</body>
 </html>
